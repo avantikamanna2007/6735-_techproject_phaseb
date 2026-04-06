@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | MonoMuseum</title>
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuseum website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuseum Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>  
+
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+        </nav>
+
+        <main class="main">
+            <h1>Explore</h1>
+            <img src="../static/museumISProject.jpeg" alt="Inside view of the MonoMuseum museum building" width="300">
+            <h2>Gallery</h2>
+            <div class="slideshow">
+                <img id="galleryImage" src="../static/gallery1.jpeg" alt="Gallery image">
+
+                <div class="gallery-buttons">
+                    <button type="button" onclick="previousImage()">Previous</button>
+                    <button type="button" onclick="nextImage()">Next</button>
+                </div>
+            </div>
+            <h2>Visit Us</h2>
+            <div id="map"></div>
+            <h2>Wimbeldon Tennis Museum</h2>
+            <iframe class ="video" src="https://www.youtube.com/embed/hqnhKDsCASA?si=7pI7FPfcrptz9t0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <h2>Mission Statement</h2>
+            <p>MonoMuseum is focused on enriching visitors on the story of tennis, a large of cultural history.</p>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2007 - Museum was founded</li>
+                <li>2010 - Added Player Exhibition</li>
+                <li>2023 - Launched Technique Exhibition</li>
+            </ul>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© MonoMuseum. All rights reserved.</p>
+            <h6>Hours: Sat and Sun - 8AM to 5 PM -</h6>
+            <h6>Location: 5000 Forbes Ave, Pittsburgh, PA 15213</h6>
+            <h6>Contact: monomuseum@gmail.com</h6>
+        </footer>
+    </div>
+</body>
+</html>

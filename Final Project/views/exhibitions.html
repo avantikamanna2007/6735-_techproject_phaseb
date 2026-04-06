@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions | MonoMuseum</title>
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuseum website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>  
+
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+        </nav>
+
+        <main class="main">
+            <h1>Exhibitions</h1>
+
+            <h3>Hardware Exhibition</h3>
+            <p>This exhibiotn follows the changes in the physical items in tennis have changed over time.</p>
+
+            <h3>Player's Exhibition</h3>
+            <p>This exhibition is focused on watching tennis icons grow up and their tennis careers.</p>
+
+            <h3>Technique Exhibition</h3>
+            <p>This exhibition is video and audio centered, and focuses on how techniques in tennis have changed.</p>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© MonoMuseum. All rights reserved.</p>
+            <h6>Hours: Sat and Sun - 8AM to 5 PM -</h6>
+            <h6>Location: 5000 Forbes Ave, Pittsburgh, PA 15213</h6>
+            <h6>Contact: monomuseum@gmail.com</h6>
+        </footer>
+    </div>
+</body>
+</html>
