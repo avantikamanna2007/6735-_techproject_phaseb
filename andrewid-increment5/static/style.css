@@ -1,0 +1,297 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: #0b0b0c;
+  color: #f5f5f7;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "nav_bar"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: start;
+}
+
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav_bar {
+  grid-area: nav_bar;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px;
+  border-top: 1px solid rgba(245,245,247,.12);
+  border-bottom: 1px solid rgba(245,245,247,.12);
+}
+
+.main {
+  grid-area: main;
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer {
+  grid-area: footer;
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+}
+
+#logo {
+  width: 180px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  min-width: 130px;
+  text-align: center;
+  line-height: 1.2;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav_bar a:hover {
+  background-color: rgba(255,255,255,0.08);
+}
+
+/* active page */
+.active {
+  color: #92ad70;
+  background-color: rgba(255,255,255,0.08);
+}
+
+.buyticket {
+  background-color: #92ad70;
+  color: #0b0b0c;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.buyticket:hover {
+  background-color: #7d955f;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid rgba(245,245,247,0.2);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+form button {
+  background-color: #92ad70;
+  color: #0b0b0c;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #7d955f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.active {
+  color: #92ad70;
+  font-weight: 500;
+  border-bottom: 2px solid #92ad70;
+}
+
+#longIntro {
+  display: none;
+}
+
+#readLess {
+  display: none;
+}
+
+#readMore, #readLess {
+  background-color: #92ad70;
+  color: #0b0b0c;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#readMore:hover, #readLess:hover {
+  background-color: #7d955f;
+}
+
+#purchaseForm {
+  display: none;
+  margin-top: 20px;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 20px;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid rgba(245,245,247,0.2);
+  vertical-align: top;
+  height: 110px;
+  padding: 10px;
+  text-align: left;
+}
+
+.calendar td span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.calendar .available {
+  background-color: rgba(146, 173, 112, 0.12);
+}
+
+.calendar .unavailable {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(245,245,247,0.45);
+}
+
+.calendar .weekday {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(245,245,247,0.45);
+}
+
+.calendar button {
+  background-color: #92ad70;
+  color: #0b0b0c;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.calendar button:hover {
+  background-color: #7d955f;
+}
+
+.calendar .unavailable button,
+.calendar .weekday button {
+  display: none;
+}
+
+.nav_bar .icon {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+
+
+  .nav_bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .nav_bar a {
+    display: none;
+  }
+
+  .nav_bar a:first-child {
+    display: block;
+  }
+
+
+  .nav_bar .icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .nav_bar.responsive a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.video {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+  #map {
+    height: 300px;
+  }
+}
+

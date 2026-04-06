@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | MonoMuse</title>
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>  
+
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+        </nav>
+
+        <main class="main">
+            <h1>Explore</h1>
+            <img src="../static/museumISProject.jpeg" alt="Front view of the MonoMuse museum building" width="300">
+            <h2>Visit Us</h2>
+            <div id="map"></div>
+            <h2>Wimbeldon Tennis Museum</h2>
+            <iframe class ="video" src="https://www.youtube.com/embed/hqnhKDsCASA?si=7pI7FPfcrptz9t0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <h2>Mission Statement</h2>
+    
+            <p>MonoMuse is focused on exploring the beauty of art and technology, and serving the general public with accessibility of art. Our mission is to give people the chance to admire art related to technology through AI, photography, editing, and more.</p>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2007 - Museum was founded</li>
+                <li>2010 - Added photography center</li>
+                <li>2023 - Launched an exhibition on AI</li>
+            </ul>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
