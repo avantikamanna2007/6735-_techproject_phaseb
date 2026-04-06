@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation | MonoMuseum</title>
+    <meta name="description" content="MonoMuseum order confirmation">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear(); showConfirmation();">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuseum Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+        </nav>
+
+        <main class="main">
+            <h1>Order Confirmation</h1>
+            <p id="message"></p>
+            <p id="total"></p>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© MonoMuseum. All rights reserved.</p>
+            <h6>Hours: Sat and Sun - 8AM to 5 PM -</h6>
+            <h6>Location: 5000 Forbes Ave, Pittsburgh, PA 15213</h6>
+            <h6>Contact: monomuseum@gmail.com</h6>
+        </footer>
+    </div>
+</body>
+</html>

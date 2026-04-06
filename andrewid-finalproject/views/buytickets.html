@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets | MonoMuse</title>
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuseum website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuseum Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+        </nav>
+
+        <main class="main">
+            <h1>Buy Tickets</h1>
+
+            <h2>Ticket Prices</h2>
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td>Standard admission</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Discounted admission for students</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Discounted admission for members</td>
+                    <td>$18</td>
+                </tr>
+            </table>
+
+            <h2>Available Dates</h2>
+            <h2>April 2026 Schedule</h2>
+                <table class="calendar">
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="weekday unavailable"><span>1</span></td>
+                        <td class="weekday unavailable"><span>2</span></td>
+                        <td class="weekday unavailable"><span>3</span></td>
+                        <td class="available">
+                            <span>4</span>
+                            <button type="button" onclick="goToCheckout('April 4, 2026')">Buy Now</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="available">
+                            <span>5</span>
+                            <button type="button" onclick="goToCheckout('April 5, 2026')">Buy Now</button>
+                        </td>
+                        <td class="weekday unavailable"><span>6</span></td>
+                        <td class="weekday unavailable"><span>7</span></td>
+                        <td class="weekday unavailable"><span>8</span></td>
+                        <td class="weekday unavailable"><span>9</span></td>
+                        <td class="weekday unavailable"><span>10</span></td>
+                        <td class="available">
+                            <span>11</span>
+                            <button type="button" onclick="goToCheckout('April 11, 2026')">Buy Now</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="available">
+                            <span>12</span>
+                            <button type="button" onclick="goToCheckout('April 12, 2026')">Buy Now</button>
+                        </td>
+                        <td class="weekday unavailable"><span>13</span></td>
+                        <td class="weekday unavailable"><span>14</span></td>
+                        <td class="weekday unavailable"><span>15</span></td>
+                        <td class="weekday unavailable"><span>16</span></td>
+                        <td class="weekday unavailable"><span>17</span></td>
+                        <td class="available">
+                            <span>18</span>
+                            <button type="button" onclick="goToCheckout('April 18, 2026')">Buy Now</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="available">
+                            <span>19</span>
+                            <button type="button" onclick="goToCheckout('April 19, 2026')">Buy Now</button>
+                        </td>
+                        <td class="weekday unavailable"><span>20</span></td>
+                        <td class="weekday unavailable"><span>21</span></td>
+                        <td class="weekday unavailable"><span>22</span></td>
+                        <td class="weekday unavailable"><span>23</span></td>
+                        <td class="weekday unavailable"><span>24</span></td>
+                        <td class="available">
+                            <span>25</span>
+                            <button type="button" onclick="goToCheckout('April 25, 2026')">Buy Now</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="available">
+                            <span>26</span>
+                            <button type="button" onclick="goToCheckout('April 26, 2026')">Buy Now</button>
+                        </td>
+                        <td class="weekday unavailable"><span>27</span></td>
+                        <td class="weekday unavailable"><span>28</span></td>
+                        <td class="weekday unavailable"><span>29</span></td>
+                        <td class="weekday unavailable"><span>30</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            <form id="purchaseForm">
+                <h2>Purchase Form</h2>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="ticketCount">Number of Tickets:</label>
+                <input type="number" id="ticketCount" name="ticketCount" min="1" required>
+
+                <label for="selectedDate">Selected Date:</label>
+                <input type="text" id="selectedDate" name="selectedDate" readonly>
+
+                <button type="button" onclick="submitPurchase()">Submit</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© MonoMuseum. All rights reserved.</p>
+            <h6>Hours: Sat and Sun - 8AM to 5 PM -</h6>
+            <h6>Location: 5000 Forbes Ave, Pittsburgh, PA 15213</h6>
+            <h6>Contact: monomuseum@gmail.com</h6>
+        </footer>
+    </div>
+</body>
+</html>
